@@ -1,0 +1,34 @@
+{
+  "name": "jsx",
+  "version": "0.0.1",
+  "description": "JavaScript native utilities",
+
+  "devDependencies": {
+    "grunt-cli": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-uglify": "latest"
+  },
+  "main": "bin/jsx.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SebastianGlonner/jsx.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "js",
+    "utility",
+    "amd"
+  ],
+  "author": "Sebastian Glonner <info@efesus.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SebastianGlonner/jsx/issues"
+  },
+  "homepage": "https://github.com/SebastianGlonner/jsx"
+}

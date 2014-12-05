@@ -18,16 +18,15 @@ if (isNodeJs) {
 } else {
   console.log('whaaat');
   // The minjector library will be loaded in the HTML spec file.
-  Minjector.config({
-    baseUrl: './',
-
-  });
+  // Minjector.config({
+  //   baseUrl: './'
+  // });
 }
 
 var jsx;
 
 beforeEach(function(done) {
-  define(['../jsx'], function(jsxObject) {
+  define(['../bin/jsx.min'], function(jsxObject) {
     jsx = jsxObject;
     done();
   });
@@ -35,12 +34,21 @@ beforeEach(function(done) {
 
 describe('Jsx Specs', function() {
 
-  describe('extend String with functions like', function() {
+  describe('extend _String_ with functions like', function() {
 
-    describe('.startsWith()', function() {
-      it('returns true', function() {
+    it('.startsWith(needle, startPosition), case sensitive', function() {
+      expect('Some string'.startsWith('Some ')).toBeTruthy();
+      expect(' Some string'.startsWith('Some')).toBeFalsy();
+      expect('some string'.startsWith('Some')).toBeFalsy();
 
-      });
+      expect('some string'.startsWith('string', 5)).toBeTruthy();
+      expect('some string'.startsWith('string', 4)).toBeFalsy();
+      expect('some string'.startsWith('string', 6)).toBeFalsy();
+
+      expect('some string'.startsWith(' ', 4)).toBeTruthy();
+      expect('some string some string some str'.startsWith('some', 12))
+        .toBeTruthy();
+      expect('some string some string'.startsWith('some')).toBeTruthy();
     });
   });
 });

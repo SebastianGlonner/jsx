@@ -1,0 +1,1 @@
+uglifyjs src/jsx.js --screw-ie8 -o bin/jsx.min.js -c -m sort,toplevel,eval --lint --verbose

@@ -1,0 +1,1 @@
+"function"!=typeof String.prototype.startsWith&&(String.prototype.startsWith=function(b,a){return a=a||0,this.indexOf(b,a)===a}),"function"!=typeof String.prototype.endsWith,define(function(){var a={};return a});
